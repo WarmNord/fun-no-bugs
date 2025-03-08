@@ -5,7 +5,7 @@ import java.util.List;
 
 public class ManageRestouraunt {
 
-    static private List<RestoraunFood> menu = new ArrayList<>();
+     private Menu menu = new Menu();
 
     /*
     * Управление рестораном
@@ -16,11 +16,11 @@ public class ManageRestouraunt {
     * */
 
     void addFood(RestoraunFood food) {
-        menu.add(food);
+        menu.addFood(food);
     }
 
-    void showInfo(int index) {
-        menu.get(index).showFood();
+    void showInfo(RestoraunFood food) {
+        menu.showInfo(food);
     }
 
     public static void main(String[] args) {
@@ -31,7 +31,7 @@ public class ManageRestouraunt {
         manageRestouraunt.addFood(water);
         manageRestouraunt.addFood(hotFood);
 
-        manageRestouraunt.showInfo(0);
-        manageRestouraunt.showInfo(1);
+        manageRestouraunt.showInfo(water);
+        manageRestouraunt.showInfo(hotFood);
     }
 }
