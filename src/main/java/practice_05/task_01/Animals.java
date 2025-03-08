@@ -10,6 +10,7 @@ public abstract class Animals {
     Animals(String name) {
         this.name = name;
     }
+
     abstract void makeNoize();
     abstract void go();
 }

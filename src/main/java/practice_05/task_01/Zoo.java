@@ -10,8 +10,11 @@ public class Zoo {
 Например, слон трубит и ходит, а птица чирикает и летает.
 Нужно спроектировать систему, которая может работать с любыми животными, добавлять их в зоопарк, а затем показывать, как они издают звуки и передвигаются.*/
 
+    private ArrayList<Animals> animals = new ArrayList<>();
+
     Animals addAnimal(Animals animal) {
         System.out.println("Добавлено новое животное " + animal.getName());
+        animals.add(animal);
         return animal;
     }
 
@@ -22,15 +25,15 @@ public class Zoo {
 
     public static void main(String[] args) {
 
-        Zoo zoo = new Zoo();
+        Manager manager = new Manager();
         Animals puma = new Puma();
         Animals colibri = new Colibri();
 
-        zoo.addAnimal(puma);
-        zoo.showVoiceAndGo(puma);
+        manager.addAnimal(puma);
+        manager.showVoiceAndGo(puma);
 
-        zoo.addAnimal(colibri);
-        zoo.showVoiceAndGo(colibri);
+        manager.addAnimal(colibri);
+        manager.showVoiceAndGo(colibri);
 
     }
 }

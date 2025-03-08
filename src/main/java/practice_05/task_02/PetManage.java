@@ -10,8 +10,9 @@ public class PetManage {
          ourPets.add(pet);
     }
 
-    void doAction(int indexPet) {
-        ourPets.get(indexPet).doActionWithPet();
+    void doAction(Pets pet) {
+        ourPets.get(ourPets.indexOf(pet)).doActionWithPet();
+
     }
 
     public static void main(String[] args) {
@@ -23,8 +24,8 @@ public class PetManage {
         manage.addPets(cat);
         manage.addPets(dog);
 
-        manage.doAction(0);
-        manage.doAction(1);
+        manage.doAction(cat);
+        manage.doAction(dog);
 
     }
 }
