@@ -1,25 +1,22 @@
 package practice_05.task_04;
 
-public class Student extends Users implements Study {
-    private int progressCourse;
+public class Student extends Users {
     private String name;
 
     Student(String name) {
         super(name);
     }
 
-    private int getProgressCourse() {
-        return this.progressCourse;
-    }
 
-    @Override
+
+/*    @Override
     public void teach() {
-        System.out.print("Учусь на курсе");
+        System.out.print("Учусь на курсе ");
         this.progressCourse++;
     }
 
     void showProgress() {
         System.out.println("\nПрогресс " + getProgressCourse());
-    }
+    }*/
 
 }

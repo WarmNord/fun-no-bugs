@@ -1,6 +1,6 @@
 package practice_05.task_04;
 
-public class Teacher extends Users implements Teach {
+public class Teacher extends Users {
     String name;
     Users user;
 
@@ -8,9 +8,9 @@ public class Teacher extends Users implements Teach {
         super(name);
     }
 
-    @Override
-    public void checkHomeWork(Student student) {
-        System.out.println("Проверил работу студента " + student.getName());
+    public void checkHomeWork(Course course, HomeWork homeWork, Student student) {
+
+        System.out.println("Проверил работу студента " + student.getName() + " Курс " + course.getNameCourse() + " задание " + homeWork.getTask());
     }
 
 }

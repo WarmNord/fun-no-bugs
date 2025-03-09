@@ -1,9 +1,9 @@
 package practice_05.task_04;
 
-public abstract class Courses {
+public abstract class Course {
     private String nameCourse;
 
-    Courses(String nameCourse) {
+    Course(String nameCourse) {
         this.nameCourse = nameCourse;
     }
 
@@ -17,4 +17,7 @@ public abstract class Courses {
     public abstract Teacher getTeacher(int index);
     public abstract Student getStudent(int index);
 
+    public abstract void sendHomeWork(HomeWork homeWork, Student student);
+
+    public abstract void showProgress(ProgressBook progressBook, Student student);
 }

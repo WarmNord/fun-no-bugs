@@ -3,7 +3,7 @@ package practice_05.task_04;
 import java.util.ArrayList;
 import java.util.List;
 
-public class OopCourse extends Courses {
+public class OopCourse extends Course {
     private static final String NAME = "Java OOP";
     private static List<Teacher> teachers = new ArrayList<>();
     private static List<Student> students = new ArrayList<>();
@@ -31,6 +31,17 @@ public class OopCourse extends Courses {
     @Override
     public Student getStudent(int index) {
         return students.get(index);
+    }
+
+    @Override
+    public void sendHomeWork(HomeWork homeWork, Student student) {
+        homeWork.addProgress();
+        System.out.println("Сдана работа " + homeWork.getTask() + " студент " + student.getName());
+    }
+
+    @Override
+    public void showProgress(ProgressBook progressBook, Student student) {
+        System.out.println("Прогресс " + progressBook.getProgressCourse() + " студент " + student.getName());
     }
 
 }
