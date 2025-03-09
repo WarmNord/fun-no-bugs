@@ -4,12 +4,12 @@ public class Book {
 
     private String author;
     private String nameBook;
-    private boolean isAvalable;
+    private CardBook cardBook;
 
     Book(String author, String nameBook) {
         this.author = author;
         this.nameBook = nameBook;
-        this.isAvalable = true;
+        this.cardBook = new CardBook();
     }
 
     public String getAuthor() {
@@ -21,14 +21,18 @@ public class Book {
     }
 
     public void setAvalable(boolean avalable) {
-        this.isAvalable = avalable;
+        cardBook.setAvalable(avalable);
     }
 
     boolean getIsAvalable() {
-        return this.isAvalable;
+        return cardBook.getIsAvalable();
     }
 
     String bookInfo() {
         return getNameBook() + ", автор " + getAuthor();
+    }
+
+    public CardBook getCardBook() {
+        return this.cardBook;
     }
 }
