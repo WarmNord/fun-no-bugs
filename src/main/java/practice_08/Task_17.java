@@ -14,10 +14,19 @@ collect(...)
 Collectors.groupingBy(...)
 n -> n % 2 == 0*/
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         List<Integer> integers = Arrays.asList(0,1,2,3,4,5,6);
+        //Как проверить, завершены ли все задачи в ExecutorService?
+        Thread t = new Thread();
+        System.out.println("Старт потока");
+        t.run();
+        System.out.println("Слип потока");
+        t.sleep(Long.MAX_VALUE);
+        System.out.println("Слип потока окончание");
 
-        System.out.println(
+
+
+                System.out.println(
                 integers.stream().collect(Collectors.groupingBy(x -> x % 2 == 0))
         );
     }
