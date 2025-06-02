@@ -29,7 +29,7 @@ public class Task04 {
                 System.out.println("Факториал числа: " + 1);
                 break;
             }
-            for (int i =1; i <= number; i++) {
+            for (int i = 1; i <= number; i++) {
                 result *= i;
             }
             System.out.println("Факториал числа: " + result);

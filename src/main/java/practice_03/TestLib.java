@@ -16,8 +16,5 @@ public class TestLib {
         System.out.println(author1);
         System.out.println(library.year);
         System.out.println(library.category);
-
-
-
     }
 }

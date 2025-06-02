@@ -41,5 +41,38 @@ public class Cache {
     }
 
 
+    public class Animal {
+
+        public void sound() {
+
+            System.out.println("Животное издаёт звук.");
+
+        }
+
+    }
+
+    public class Dog extends Animal {
+
+        @Override
+
+        public void sound() {
+
+            System.out.println("Собака лает.");
+
+        }
+
+    }
+
+    public class Main {
+
+        public static void main(String[] args) {
+
+
+
+        }
+
+    }
 
 }
+
+

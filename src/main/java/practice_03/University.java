@@ -39,6 +39,10 @@ public class University {
         System.out.println("Университет: " + universityName + ", Имя: " + getStudentName());
     }
 
+    static {
+        System.out.println("Загрузка класса");
+    }
+
     public static void main(String[] args) {
 
         University student01 = new University(01,"Yan");

@@ -1,5 +1,8 @@
 package practice_09;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class Task01 {
     /*
     1. Задача: создание одного потока
@@ -21,5 +24,12 @@ public class Task01 {
                 }
         );
         t.start();
+
+
+        List<String> names = Arrays.asList("Анна", "Борис", "Владимир");
+        names.stream()
+                .map(String::toUpperCase)
+                .filter(name -> name.length() >= 5)
+                .forEach(System.out::println);
     }
 }
