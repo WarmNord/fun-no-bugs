@@ -3,6 +3,9 @@ package practice_12_03;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import practice01.practice_12_03.GradeService;
+import practice01.practice_12_03.InvalidGradeException;
+import practice01.practice_12_03.StudentGrade;
 
 import static org.junit.jupiter.api.Assertions.*;
 

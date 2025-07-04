@@ -2,6 +2,8 @@ package practice_12_01;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import practice01.practice_12_01.EntityManager;
+import practice01.practice_12_01.User;
 
 import java.util.List;
 

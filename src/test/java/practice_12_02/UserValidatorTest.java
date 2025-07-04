@@ -2,6 +2,10 @@ package practice_12_02;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import practice01.practice_12_02.InvalidUserException;
+import practice01.practice_12_02.User;
+import practice01.practice_12_02.UserValidator;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 

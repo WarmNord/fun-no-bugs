@@ -189,52 +189,121 @@ class Solution {
         System.out.println(number6);
 
 
-
         return (number1 + number2 + number3) == (number4 + number5 + number6);
     }
 
-    public static void main(String[] args) {
-/*        String s = "hi how are you";
-        System.out.println(s.split(" ").length);
-
-        List<String> a = new ArrayList<>();
-        a.add("d");
-        a.add(0, "s");
-        a.remove(1);
-
-        System.out.println(a);
-        Solution c = new Solution();
-
-        System.out.println(Arrays.deepToString(c.matrix(20)));
-
-
-        String [] l = new String[] {"flower","flow","flight"};
-
-        System.out.println(feast("great blue hero","garlic nann"));*/
-
-        int a = 5;
-        int b = 8;
-
-        a = a + b; //13
-        System.out.println(a);
-        b = a - b; // 5
-        System.out.println(b);
-        a = a - b; // 8
-        System.out.println(a);
-        int c = 234765;
-        System.out.println(happyTicket(123141));
-        String st = "fbbfl";
-
-        //System.out.println(st.substring(1,2));
-        boolean result = false;
-        for (int i = 0; i < st.length() ; i++) {
-            for (int j = st.length() - 1; j >= 0 ; j--) {
-                result = st.charAt(i) == st.charAt(j);
+    public static int points(String[] games) {
+        int result = 0;
+        for (String g : games) {
+            int x = g.charAt(0);
+            int y = g.charAt(2);
+            if (x > y) {
+                result += 3;
+            } else if (x == y) {
+                result += 1;
             }
         }
 
-        System.out.println(st.substring(0,1));
-        System.out.println(st.substring(st.length()-1));
+        return result;
+    }
+
+    public static String toJadenCase(String phrase) {
+        // TODO put your code below this comment
+        if (phrase == null) {
+            return null;
+        }
+        if (phrase.isEmpty()) {
+            return "";
+        }
+        StringBuilder result = new StringBuilder();
+        for (int i = 0; i < phrase.length(); i++) {
+            if (i == 0) {
+                result.append(Character.toUpperCase(phrase.charAt(0)));
+            } else if (phrase.charAt(i - 1) == ' ') {
+                result.append(Character.toUpperCase(phrase.charAt(i)));
+            } else {
+                result.append(phrase.charAt(i));
+            }
+        }
+        return result.toString();
+    }
+
+    public static boolean isLove(final int flower1, final int flower2) {
+
+        if (flower1 % 2 == 0 && flower2 % 2 != 0) {
+            return true;
+        } else if (flower2 % 2 == 0 && flower1 % 2 != 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public static int Past(int h, int m, int s) {
+        //Happy Coding! ^_^
+        return h * 60 * 60 * 1000 + m * 60 * 1000 + s * 1000;
+    }
+
+    public static int[] capitals(String s) {
+        List<Integer> result = new ArrayList<>();
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.isUpperCase(s.charAt(i))) {
+                result.add(i);
+            }
+        }
+        return result.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    public static int sortDesc(final int num) {
+
+        String numbers = Integer.toString(num);
+
+        Character[] numCharacter = new Character[numbers.length()];
+
+        for (int i = 0; i < numbers.length(); i++) {
+            numCharacter[i] = numbers.charAt(i);
+        }
+
+        Arrays.sort(numCharacter, Collections.reverseOrder());
+
+        StringBuilder result = new StringBuilder();
+        for (Character n : numCharacter) {
+            result.append(n);
+        }
+
+        /*
+        *
+        String[] array = String.valueOf(num).split("");
+        Arrays.sort(array, Collections.reverseOrder());
+        return Integer.valueOf(String.join("", array));
+        * */
+        return Integer.parseInt(result.toString());
+    }
+
+    /*
+     *задача поиска бин поиска
+     * массив отсортированный 5 7 9 11
+     * */
+    public static int findElementByBinSearch(int target, int[] array) {
+
+        int len = array.length / 2;
+        int min = 0;
+        int max = array.length - 1;
+
+        while (true) {
+            if (array[target] > target) {
+
+            }
+
+
+        }
+
+    }
+
+
+    public static void main(String[] args) {
+        System.out.println(findElementByBinSearch(9,new int[]{5, 7, 9, 11}));
 
     }
 

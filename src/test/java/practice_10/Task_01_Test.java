@@ -1,6 +1,7 @@
 package practice_10;
 
 import org.junit.jupiter.api.Test;
+import practice01.practice_10.Task_01;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -2,6 +2,9 @@ package practice_12_04;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import practice01.practice_12_04.Movie;
+import practice01.practice_12_04.MovieService;
+import practice01.practice_12_04.Rating;
 
 import static org.junit.jupiter.api.Assertions.*;
 

@@ -2,6 +2,8 @@ package practice_12_05;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
+import practice01.practice_12_05.InventoryService;
+import practice01.practice_12_05.Product;
 
 import java.util.ArrayList;
 import java.util.List;

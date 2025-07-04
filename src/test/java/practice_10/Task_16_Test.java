@@ -1,8 +1,7 @@
 package practice_10;
 
 import org.junit.jupiter.api.Test;
-
-import java.util.Arrays;
+import practice01.practice_10.Task_16;
 
 import static org.junit.jupiter.api.Assertions.*;
 
